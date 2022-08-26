@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Quick NPCs</title>
+</head>
+<body>	
+	<div id="text">
+	</div>
+	
+	<!-- scripts and html includes -->
+	<script>
+		var div = document.getElementById("text");
+
+        var races = ["Dragonborn",
+                    "Dwarf",
+                    "Elf",
+                    "Gnome",
+                    "Halfling",
+                    "Human",
+                    "Tiefling",
+                    "Leonin",
+                    "Owlin",
+                    "Aarakocra",
+                    "Aasimar",
+                    "Air Genasi",
+                    "Bugbear",
+                    "Centaur",
+                    "Duergar",
+                    "Earth Genasi",
+                    "Eladrin",
+                    "Fairy",
+                    "Firbolg",
+                    "Fire Genasi",
+                    "Goblin",
+                    "Goliath",
+                    "Harengon",
+                    "Hobgoblin",
+                    "Kenku",
+                    "Kobold",
+                    "Lizardfolk",
+                    "Minotaur",
+                    "Orc",
+                    "Satyr",
+                    "Sea Elf",
+                    "Shadar-kai",
+                    "Tabaxi",
+                    "Tortle",
+                    "Triton",
+                    "Water Genasi",
+                    "Yuan-ti",
+                    "Kalashtar",
+                    "Warforged",
+                    "Loxodon",
+                    "Vedalken"];
+
+        var list = "";
+
+        for(var i=0; i<10; i++) {
+            list += races[Math.floor(Math.random()*races.length)] + [", male", ", female"][Math.floor(Math.random()*2)];
+            list += "\n\n";
+        }
+
+        div.innerText = list;
+</script>
+</body>
+</html>
